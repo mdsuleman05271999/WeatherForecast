@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+  </head>
+  <style>
+    .weatherApp {
+      position: absolute;
+      top: 10%;
+      left: 40%;
+      background-color: #f7f7f7;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      max-width: 600px;
+      padding: 20px;
+    }
+    #weather-data {
+      text-transform: capitalize;
+      text-align: center;
+      margin: 8px;
+    }
+    form input[type="button"]:nth-of-type(2):hover {
+      background-color: blue;
+      font-size: 17px;
+      cursor: pointer;
+    }
+    form {
+      padding: 10px;
+      font-size: 10px;
+    }
+    .icon img {
+      width: 80px;
+      height: 80px;
+      font-size: 30px;
+      padding: 10px;
+    }
+    .temperature {
+      font-size: 30px;
+    }
+    .description,
+    .details {
+      font-size: 20px;
+    }
+  </style>
+  <body>
+    <div class="weatherApp">
+      <h1>Weather App</h1>
+      <form>
+        <input type="text" placeholder="Enter City name" id="cityInput" />
+        <input
+          type="button"
+          type="submit"
+          onclick="getWeather()"
+          value="Get Weather"
+          id="weather"
+        />
+      </form>
+      <div id="weather-data">
+        <div class="icon">
+          <!-- <img
+            src="http://openweathermap.org/img/wn/01d.png"
+            alt="Weather icon"
+          /> -->
+        </div>
+        <div class="temperature"></div>
+        <div class="description"></div>
+        <div class="details">
+          <!-- <div>Feels like :23°c</div>
+          <div>Humidity: 40%</div>
+          <div>Wind speed : 5m/s</div> -->
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
